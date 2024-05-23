@@ -1,5 +1,6 @@
 fn main() {
     bacic_if_fn();
+    if_statement_in_let_statement();
 }
 
 fn bacic_if_fn()  {
@@ -9,4 +10,15 @@ fn bacic_if_fn()  {
     } else{
         println!("condition was false");
     }
+}
+
+fn if_statement_in_let_statement()  {
+    let condition = true;
+    let number = if condition {
+        5
+    } else{
+        6
+    };
+    
+    println!("The value of number is : {}", number);
 }
