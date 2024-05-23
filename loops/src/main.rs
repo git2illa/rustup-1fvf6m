@@ -1,6 +1,7 @@
 fn main() {
     basic_loop();
     basic_iter();
+    basic_for();
 }
 
 fn basic_loop() {
@@ -20,4 +21,11 @@ fn basic_iter() {
     for element in a.iter() {
         println!("iterator current -- {}", element);
     }
+}
+
+fn basic_for() {
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF");
 }
