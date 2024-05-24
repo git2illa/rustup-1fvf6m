@@ -4,6 +4,16 @@ struct Reactangle {
     height: u32,
 }
 
+impl Reactangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    fn can_hold(&self, other: &Reactangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+}
+
 fn main() {
     let square = (20,30);
 
@@ -19,6 +29,20 @@ fn main() {
     println!("-- {:#?}", square);
 
     println!("-- {}", struct_calc_area(&square));
+    println!("-- -- {}", square.area());
+
+    let react1 = Reactangle{
+        width: 10,
+        height: 20
+    };
+
+    let react2 = Reactangle{
+        width: 15,
+        height: 25
+    };
+
+    println!("-- {}", square.can_hold(&react1));
+    println!("-- {}", square.can_hold(&react2));
 }
 
 // tuple way 
