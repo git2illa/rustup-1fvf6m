@@ -16,6 +16,7 @@ fn main() {
     };
 
     println!("-- {:?}", square);
+    println!("-- {:#?}", square);
 
     println!("-- {}", struct_calc_area(&square));
 }
