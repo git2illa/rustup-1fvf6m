@@ -3,6 +3,7 @@ struct Reactangle {
     width: u32,
     height: u32,
 }
+
 fn main() {
     let square = (20,30);
 
@@ -13,6 +14,8 @@ fn main() {
         width: 20,
         height: 50
     };
+
+    println!("-- {:?}", square);
 
     println!("-- {}", struct_calc_area(&square));
 }
