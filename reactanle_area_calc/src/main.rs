@@ -12,16 +12,23 @@ impl Reactangle {
     fn can_hold(&self, other: &Reactangle) -> bool {
         self.width > other.width && self.height > other.height
     }
+
+    fn square(size: u32) -> Reactangle{
+        Reactangle{
+            width: size,
+            height: size
+        }
+    }
 }
 
 fn main() {
-    let square = (20,30);
+    let square = (30,30);
 
     println!("This reactangle area is {} square pixels.", basic_calc_reactangle_area(square));
 
 
     let square = Reactangle{
-        width: 20,
+        width: 50,
         height: 50
     };
 
@@ -43,6 +50,8 @@ fn main() {
 
     println!("-- {}", square.can_hold(&react1));
     println!("-- {}", square.can_hold(&react2));
+
+    println!("-- square {:#?}", Reactangle::square(10));
 }
 
 // tuple way 
