@@ -10,6 +10,12 @@ fn main() {
         process::exit(1);
     });
 
+    run(config);
+
+}
+
+fn run(config: Config) {
+
     let contents = fs::read_to_string(config.filename)
         .expect("Something wrong when reading the file.");
 
