@@ -7,6 +7,6 @@ fn main() {
 
 fn basic_calc(intensity: u32) -> u32 {
     println!("calculation slowly...");
-    thread::sleep(Duration.from_sec(2));
+    thread::sleep(Duration::from_secs(2));
     intensity
 }
