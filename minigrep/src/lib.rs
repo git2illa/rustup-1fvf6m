@@ -59,6 +59,7 @@ pub struct Config {
 
 impl Config {
     pub fn new(mut args: std::env::Args) -> Result<Config, &'static str>{
+        // env::args的返回值的第一个值是程序本身的名称。为了忽略它，我们必须先调用一次next并忽略返回值
         args.next();
 
 
