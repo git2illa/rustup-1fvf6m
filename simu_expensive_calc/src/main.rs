@@ -23,6 +23,7 @@ impl<T> Cacher<T>
             Some(v) => v,
             None => {
                 let v = (self.calculation)(arg);
+                self.value = Some(v);
                 v
             }
         }
@@ -31,8 +32,8 @@ impl<T> Cacher<T>
 }
 
 fn main() {
-    let simulate_user_intensity = 21;
-    let simulate_random_number = 3;
+    let simulate_user_intensity = 24;
+    let simulate_random_number = 5;
     generate_workout(simulate_user_intensity, simulate_random_number);
 }
 
