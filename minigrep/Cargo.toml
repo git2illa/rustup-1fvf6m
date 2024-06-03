@@ -1,6 +1,8 @@
 [package]
-name = "minigrep"
+name = "catzilla_minigrep"
 version = "0.1.0"
+authors = ["Catzilla <catzilla@email.com>"]
 edition = "2021"
-
+description = "A simple demo about learning how to use rust. "
+license = "MIT OR Apache-2.0"
 [dependencies]
