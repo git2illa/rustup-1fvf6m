@@ -1,7 +1,26 @@
+//! Minigrep is a demo for beginers to learn rust
+
 use std::fs;
 use std::error::Error;
 use std::env;
 
+
+/// # minigrep demo
+/// ```rust
+/// let query = "duct";
+/// let contents = "safe, fast, productive";
+/// fn case_sensitive(){
+///   println!("{}", query);
+///   println!("{}", contents);
+/// }
+///
+///        assert_eq!(
+///            vec!["safe, fast, productive."],
+///            minigrep::search(query, contents)
+///        );
+/// // defalut is case_sensitive
+/// // use `cargo doc` to view this generated HTML
+/// ```
 
 #[cfg(test)]
 mod tests {
