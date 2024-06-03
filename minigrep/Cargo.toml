@@ -1,5 +1,5 @@
 [package]
-name = "minigrep"
+name = "cat_minigrep"
 version = "0.1.0"
 authors = ["Catzilla <catzilla@email.com>"]
 edition = "2021"

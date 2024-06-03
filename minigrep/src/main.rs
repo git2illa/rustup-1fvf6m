@@ -1,7 +1,7 @@
 use std::env;
 use std::process;
-use minigrep::Config;
-use minigrep::run;
+use cat_minigrep::Config;
+use cat_minigrep::run;
 
 fn main() {
     let config = Config::new(env::args()).unwrap_or_else( |err| {
