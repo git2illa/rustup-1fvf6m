@@ -13,22 +13,17 @@ fn main() {
 
 }
 
-// This function handles a TCP connection
 fn handle_connection(mut stream: TcpStream){
-    // Create a buffer of 512 bytes
     let mut buffer = [0; 512];
-    // Read the data from the TcpStream into the buffer
     stream.read(&mut buffer).unwrap();
+    let get = b"GET / HTTP/1.1\r\n";
+    if buffer.starts_with(get){
+        let contents = fs::read_to_string("hello.html").unwrap();
+        let response = format!("HTTP/1.1 200 OK\r\n\r\n{}", contents);
+        stream.write(response.as_bytes()).unwrap();
+        stream.flush().unwrap();
+    }else{
 
-    // Read the contents of the "hello.html" file into a string
-    let contents = fs::read_to_string("hello.html").unwrap();
-    // Create an HTTP response with the contents of the "hello.html" file
-    let response = format!(
-        "HTTP/1.1 200 OK\r\n\r\n{}",
-        contents,
-    );
-    // Write the HTTP response to the TcpStream
-    stream.write(response.as_bytes()).unwrap();
-    // Flush the TcpStream
-    stream.flush().unwrap();
+    }
+
 }
